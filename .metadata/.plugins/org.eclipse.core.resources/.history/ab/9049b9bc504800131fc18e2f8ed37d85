@@ -1,0 +1,17 @@
+package si1.lab1;
+
+public class NumberToWords {
+
+	private String input;
+	
+	
+	public NumberToWords() {
+		input = "";
+		
+	}
+	
+	public void setInput(String teste) {
+		this.input = teste;
+	}
+
+}

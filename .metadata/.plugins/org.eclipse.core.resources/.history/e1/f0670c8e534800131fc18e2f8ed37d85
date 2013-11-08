@@ -1,0 +1,46 @@
+package si1.lab1;
+
+import java.util.HashMap;
+
+public class NumberToWords {
+
+	private String input;
+	private HashMap<String, String> map;
+	
+	
+	public NumberToWords() {
+		setInput("");;
+		map = new HashMap<>();
+		populateMap();
+		
+	}
+	
+	private void populateMap(){
+		map.put("0", "zero");
+		map.put("1", "um");
+		map.put("2", "dois");
+		map.put("3", "três");
+		map.put("4", "quatro");
+		map.put("5", "cinco");
+		map.put("6", "seis");
+		map.put("7", "sete");
+		map.put("8", "oito");
+		map.put("9", "nove");
+		map.put("10", "dez");
+		
+	}
+	
+	public void setInput(String teste) {
+		this.input = teste;
+	}
+
+	public String generateOutput() {
+		String result = map.containsKey(getInput()) ? map.get(getInput()) : "";
+		return result;
+	}
+
+	private Object getInput() {
+		return this.input;
+	}
+
+}
