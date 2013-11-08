@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="TestNumberToWords" project="lab1" tests="11" started="11" failures="0" errors="0" ignored="0">
+  <testsuite name="si1.lab1.TestNumberToWords" time="0.023">
+    <testcase name="numberBetween101and199" classname="si1.lab1.TestNumberToWords" time="0.002"/>
+    <testcase name="simplestCase" classname="si1.lab1.TestNumberToWords" time="0.0"/>
+    <testcase name="numberBetween1101and1999" classname="si1.lab1.TestNumberToWords" time="0.0"/>
+    <testcase name="numberBetween100000000and1000000000" classname="si1.lab1.TestNumberToWords" time="0.0"/>
+    <testcase name="numberBetween1001and1099" classname="si1.lab1.TestNumberToWords" time="0.0"/>
+    <testcase name="wrongInput" classname="si1.lab1.TestNumberToWords" time="0.019"/>
+    <testcase name="numberBetween2001and999999" classname="si1.lab1.TestNumberToWords" time="0.0"/>
+    <testcase name="numberBetween201and999" classname="si1.lab1.TestNumberToWords" time="0.0"/>
+    <testcase name="oneWordNumber" classname="si1.lab1.TestNumberToWords" time="0.0"/>
+    <testcase name="emptyString" classname="si1.lab1.TestNumberToWords" time="0.0"/>
+    <testcase name="numberBetween21and99" classname="si1.lab1.TestNumberToWords" time="0.001"/>
+  </testsuite>
+</testrun>

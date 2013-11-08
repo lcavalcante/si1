@@ -1,0 +1,13 @@
+package si1.lab1;
+
+public class System {
+	
+	private Number2Words n2w; 
+
+	public static void main(String[] args) {
+
+		
+
+	}
+
+}

@@ -1,0 +1,16 @@
+package si1.lab1;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	private Number2Words n2w; 
+	
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner( System.in );
+
+	}
+
+}
