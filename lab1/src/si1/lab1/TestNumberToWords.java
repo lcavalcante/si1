@@ -273,5 +273,232 @@ public class TestNumberToWords {
 		ntw.setInput(teste);
 		assertTrue(ntw.generateOutput().equals("noventa e nove"));
 	}
-
+	
+	@Test
+	public void numberBetween101and199() throws Exception{
+		String teste = new String("101");
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("cento e um"));
+		
+		teste = "111";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("cento e onze"));
+		
+		teste = "121";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("cento e vinte e um"));
+		
+		teste = "110";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("cento e dez"));
+		
+		teste = "155";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("cento e cinquenta e cinco"));
+		
+		teste = "190";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("cento e noventa"));
+		
+		teste = "199";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("cento e noventa e nove"));
+	}
+	
+	@Test
+	public void numberBetween201and999() throws Exception{
+		String teste = new String("201");
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("duzentos e um"));
+		
+		teste = "351";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("trezentos e cinquenta e um"));
+		
+		teste = "449";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("quatrocentos e quarenta e nove"));
+		
+		teste = "518";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("quinhentos e dezoito"));
+		
+		teste = "669";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("seiscentos e sessenta e nove"));
+		
+		teste = "774";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("setecentos e setenta e quatro"));
+		
+		teste = "888";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("oitocentos e oitenta e oito"));
+		
+		teste = "999";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("novecentos e noventa e nove"));
+	}
+	
+	@Test
+	public void numberBetween1001and1099() throws Exception{
+		String teste = new String("1001");
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("mil e um"));
+		
+		teste = "1011";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("mil e onze"));
+		
+		teste = "1021";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("mil e vinte e um"));
+		
+		teste = "1010";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("mil e dez"));
+		
+		teste = "1055";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("mil e cinquenta e cinco"));
+		
+		teste = "1090";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("mil e noventa"));
+		
+		teste = "1099";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("mil e noventa e nove"));
+	}
+	
+	@Test
+	public void numberBetween1101and1999() throws Exception{
+		String teste = new String("1201");
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("mil duzentos e um"));
+		
+		teste = "1351";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("mil trezentos e cinquenta e um"));
+		
+		teste = "1449";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("mil quatrocentos e quarenta e nove"));
+		
+		teste = "1518";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("mil quinhentos e dezoito"));
+		
+		teste = "1600";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("mil e seiscentos"));
+		
+		teste = "1669";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("mil seiscentos e sessenta e nove"));
+		
+		teste = "1774";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("mil setecentos e setenta e quatro"));
+		
+		teste = "1888";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("mil oitocentos e oitenta e oito"));
+		
+		teste = "1999";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("mil novecentos e noventa e nove"));
+	}
+	
+	
+	@Test
+	public void numberBetween2001and999999() throws Exception{
+		String teste = new String("2201");
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("dois mil duzentos e um"));
+		
+		teste = "10351";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("dez mil trezentos e cinquenta e um"));
+		
+		teste = "11000";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("onze mil"));
+		
+		teste = "11449";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("onze mil quatrocentos e quarenta e nove"));
+		
+		teste = "55518";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("cinquenta e cinco mil quinhentos e dezoito"));
+		
+		teste = "71669";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("setenta e um mil seiscentos e sessenta e nove"));
+		
+		teste = "81774";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("oitenta e um mil setecentos e setenta e quatro"));
+		
+		teste = "80000";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("oitenta mil"));
+		
+		teste = "91888";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("noventa e um mil oitocentos e oitenta e oito"));
+		
+		teste = "99999";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("noventa e nove mil novecentos e noventa e nove"));
+		
+		teste = "999999";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("novecentos e noventa e nove mil novecentos e noventa e nove"));
+	}
+	
+	@Test
+	public void numberBetween100000000and1000000000() throws Exception{
+		String teste = new String("1000001");
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("um milhão e um"));
+		
+		teste = "1000000";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("um milhão"));
+		
+		teste = "2000000";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("dois milhões"));
+		
+		teste = "2000010";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("dois milhões e dez"));
+		
+		teste = "90000000";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("noventa milhões"));
+		
+		teste = "90900000";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("noventa milhões e novecentos mil"));
+		
+		teste = "90900101";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("noventa milhões novecentos mil cento e um"));
+		
+		teste = "90901101";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("noventa milhões novecentos e um mil cento e um"));
+		
+		teste = "90931101";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("noventa milhões novecentos e trinta e um mil cento e um"));
+		
+		teste = "99931101";
+		ntw.setInput(teste);
+		assertTrue(ntw.generateOutput().equals("noventa e nove milhões novecentos e trinta e um mil cento e um"));
+	}
+	
 }

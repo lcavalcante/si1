@@ -59,7 +59,7 @@ public class NumberToWords {
 	}
 
 	public void setInput(String teste) throws Exception {
-		
+
 		if(!teste.equals("")){
 			try{
 				Integer.parseInt(teste);
@@ -69,9 +69,9 @@ public class NumberToWords {
 				throw new Exception("Deve informar um número");
 			}
 		}
-		
+
 		else this.input = teste;
-		
+
 	}
 
 	public String generateOutput() throws Exception {
@@ -79,19 +79,109 @@ public class NumberToWords {
 		if(input.equals("")){
 			throw new Exception("Numero não informado");
 		}
-			
-			
+
+
 		else if(map.containsKey(getInput())){
 			return map.get(getInput());
 		}
 		else{
 			String result = "";
+
+			if(this.input.length() == 2){
+				result += map.get(input.substring(input.length() - 2, input.length() - 1) + "0") + " e " + map.get(input.substring(1, input.length()));
+			}
+
+			else if(this.input.length() == 3){
+				if(input.charAt(0) == '1'){
+					result += "cento e ";
+				}
+				else{
+					result += map.get(input.substring(input.length() - 3, input.length() - 2) + "00") + " e ";
+				}
+				setInput(input.substring(input.length() - 2, input.length()));
+				removeLeftZeros();
+				result += generateOutput();
+			}
+
+			else if (this.input.length() >= 4 && this.input.length() <= 6){
+
+				String milhar = input.substring(0, input.length() - 3);
+				String aux = input.substring(input.length() - 3, input.length());
+				
+				setInput(milhar);
+
+				if(!milhar.equals("1")){
+					result += generateOutput() + " mil";
+				}
+
+				else{
+					result += "mil";
+				}
+
+
+
+				setInput(aux);
+				removeLeftZeros();
+
+				if(!input.equals("0")){
+					if(input.length() < 3 || map.containsKey(input)) {
+						result += " e";
+					}
+
+
+					result += " " + generateOutput();
+				}
+
+			}
 			
-			result += map.get(input.substring(input.length() - 2, input.length() - 1) + "0") + " e " + map.get(input.substring(1, input.length()));
-			
+			else if (this.input.length() > 6){
+				
+				String milhao = input.substring(0, input.length() -6);
+				String aux = input.substring(input.length() - 6, input.length());
+				
+				setInput(milhao);
+				
+				if(!milhao.equals("1")){
+					result += generateOutput() + " milhões";
+				}
+				
+				else{
+					result += "um milhão";
+				}
+				
+				setInput(aux);
+				removeLeftZeros();
+				
+				if(!input.equals("0")){
+					if(isLast(input) ) {
+						result += " e";
+					}
+
+
+					result += " " + generateOutput();
+				}
+				
+			}
 			return result;
-			
+
 		}
+	}
+
+	private void removeLeftZeros() throws Exception {
+		while(input.startsWith("0") && input.length() > 1){
+			setInput(input.replaceFirst("0", ""));
+
+		}
+	}
+	
+	private boolean isLast(String s) throws Exception {
+		s = s.substring(1);
+		for(int i = 0; i< s.length(); i++){
+			if(s.charAt(i) != '0'){
+				return false;
+			}
+		}
+		return true;
 	}
 
 	private Object getInput() {
