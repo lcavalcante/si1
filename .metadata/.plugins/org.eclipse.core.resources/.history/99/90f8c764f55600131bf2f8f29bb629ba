@@ -41,7 +41,7 @@ public class Task extends Model {
 	}
 
 	public String getNome() {
-		return nome;
+		return label;
 	}
 	
 	public void setNome(String label) {

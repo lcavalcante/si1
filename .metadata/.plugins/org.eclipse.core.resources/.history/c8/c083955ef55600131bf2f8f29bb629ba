@@ -14,7 +14,7 @@ public class Task extends Model {
   private Long id;
   
   @Required
-  private String nome;
+  private String label;
   
   public static Finder<Long,Task> find = new Finder(
 		    Long.class, Task.class
@@ -40,11 +40,11 @@ public class Task extends Model {
 		this.id = id;
 	}
 
-	public String getNome() {
-		return nome;
+	public String getLabel() {
+		return label;
 	}
 	
-	public void setNome(String label) {
-		this.nome = label;
+	public void setLabel(String label) {
+		this.label = label;
 	}
 }

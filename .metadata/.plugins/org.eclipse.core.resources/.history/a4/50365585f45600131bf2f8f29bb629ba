@@ -9,7 +9,7 @@ application.secret="CU>wHTck0R5`Y7/jXxYsyRJ<]RnIo1HQS_@^Xc4Q=t:1p0P:;IJZdO]V0JgT
 
 # The application languages
 # ~~~~~
-application.langs="pt-BR"
+application.langs="en"
 
 # Global object class
 # ~~~~~

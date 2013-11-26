@@ -4,27 +4,27 @@
 
 @main("Lista de tarefas") {
     
-    <h1>@tasks.size() Tarefa(s)</h1>
+    <h1>@tasks.size() tarefa(s)</h1>
     
     <ul>
         @for(task <- tasks) {
             <li>
-                @task.getNome()
+                @task.getLabel()
                 
                 @form(routes.Application.deleteTask(task.getId())) {
-                    <input type="submit" value="Remover">
+                    <input type="enviar" value="deletar">
                 }
             </li>
         }
     </ul>
     
-    <h2>Adicione uma nova tarefa!</h2>
+    <h2>Add a new task</h2>
     
     @form(routes.Application.newTask()) {
         
         @inputText(taskForm("Nome")) 
         
-        <input type="submit" value="Criar">
+        <input type="enviar" value="Criar">
         
     }
     

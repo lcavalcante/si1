@@ -9,22 +9,22 @@
     <ul>
         @for(task <- tasks) {
             <li>
-                @task.getNome()
+                @task.getLabel()
                 
                 @form(routes.Application.deleteTask(task.getId())) {
-                    <input type="submit" value="Remover">
+                    <input type="submit" value="Delete">
                 }
             </li>
         }
     </ul>
     
-    <h2>Adicione uma nova tarefa!</h2>
+    <h2>Add a new task</h2>
     
     @form(routes.Application.newTask()) {
         
-        @inputText(taskForm("Nome")) 
+        @inputText(taskForm("label")) 
         
-        <input type="submit" value="Criar">
+        <input type="submit" value="Create">
         
     }
     
