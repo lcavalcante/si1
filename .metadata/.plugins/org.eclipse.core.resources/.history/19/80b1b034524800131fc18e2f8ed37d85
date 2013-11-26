@@ -1,0 +1,30 @@
+package si1.lab1;
+
+import java.util.HashMap;
+
+public class NumberToWords {
+
+	private String input;
+	private HashMap<String, String> map;
+	
+	
+	public NumberToWords() {
+		input = "";
+		map = new HashMap<>();
+		
+	}
+	
+	private void populateMap(){
+		map.put("1", "um");
+	}
+	
+	public void setInput(String teste) {
+		this.input = teste;
+	}
+
+	public String generateOutput() {
+		
+		return "";
+	}
+
+}

@@ -1,0 +1,88 @@
+package si1.lab1;
+
+import java.util.HashMap;
+
+public class NumberToWords {
+
+	private String input;
+	private HashMap<String, String> map;
+
+
+	public NumberToWords() throws Exception {
+		setInput("");;
+		map = new HashMap<>();
+		populateMap();
+
+	}
+
+	private void populateMap(){
+		map.put("0", "zero");
+		map.put("1", "um");
+		map.put("2", "dois");
+		map.put("3", "três");
+		map.put("4", "quatro");
+		map.put("5", "cinco");
+		map.put("6", "seis");
+		map.put("7", "sete");
+		map.put("8", "oito");
+		map.put("9", "nove");
+		map.put("10", "dez");
+
+		map.put("11", "onze");
+		map.put("12", "doze");
+		map.put("13", "treze");
+		map.put("14", "catorze");
+		map.put("15", "quinze");
+		map.put("16", "dezesseis");
+		map.put("17", "dezessete");
+		map.put("18", "dezoito");
+		map.put("19", "dezenove");
+		map.put("20", "vinte");
+		map.put("30", "trinta");
+		map.put("40", "quarenta");
+		map.put("50", "cinquenta");
+		map.put("60", "sessenta");
+		map.put("70", "setenta");
+		map.put("80", "oitenta");
+		map.put("90", "noventa");
+		map.put("100", "cem");
+		map.put("200", "duzentos");
+		map.put("300", "trezentos");
+		map.put("400", "quatrocentos");
+		map.put("500", "quinhentos");
+		map.put("600", "seiscentos");
+		map.put("700", "setecentos");
+		map.put("800", "oitocentos");
+		map.put("900", "novecentos");
+		map.put("1000", "mil");
+
+	}
+
+	public void setInput(String teste) throws Exception {
+		
+		try{
+			Integer.parseInt(teste);
+			this.input = teste;
+		}
+		catch(Exception e){
+			throw new Exception("Deve informar um número");
+		}
+		
+	}
+
+	public String generateOutput() throws Exception {
+
+		switch (input) {
+
+		case "" :  
+			throw new Exception("Numero não informado");
+			
+		default : return map.containsKey(getInput()) ? map.get(getInput()) : "";
+		}
+	}
+
+	private Object getInput() {
+		return this.input;
+	}
+
+}

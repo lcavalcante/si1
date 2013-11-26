@@ -1,0 +1,14 @@
+package si1.lab1;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TestNumberToWords {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

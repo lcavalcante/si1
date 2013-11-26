@@ -1,0 +1,26 @@
+package si1.lab1;
+
+import java.util.Scanner;
+
+public class Main {
+	
+	private static Number2Words n2w; 
+	
+
+	public static void main(String[] args) {
+
+		Scanner sc = new Scanner( System.in );
+		
+		System.out.println("Informe um numero:");
+		String input = sc.next();
+		
+		try {
+			n2w = new Number2Words(input);
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			System.out.println(e.getMessage());
+		}
+
+	}
+
+}
