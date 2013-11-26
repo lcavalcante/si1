@@ -2,7 +2,6 @@ INDEX VERSION 1.126+C:\Users\Lucas\repo\si1\.metadata\.plugins\org.eclipse.jdt.c
 177138064.index
 1269897782.index
 2365606761.index
-4257325822.index
 1124710495.index
 3083924466.index
 4048542247.index
