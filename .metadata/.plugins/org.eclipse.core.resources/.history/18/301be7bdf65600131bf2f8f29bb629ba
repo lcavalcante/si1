@@ -1,0 +1,33 @@
+@(tasks: List[Task], taskForm: Form[Task])
+
+@import helper._
+
+@main("Lista de tarefas") {
+    
+    <h1>@tasks.size() Tarefa(s)</h1>
+    
+    <ul>
+        @for(task <- tasks) {
+            <li>
+                @task.getProjeto()
+                
+                @form(routes.Application.deleteTask(task.getId())) {
+                    <input type="submit" value="Remover">
+                }
+            </li>
+        }
+    </ul>
+    
+    <h2>Adicione uma nova tarefa!</h2>
+    
+    @form(routes.Application.newTask()) {
+        
+        @inputText(taskForm("Descricao")) 
+        @inputText(taskForm("Projeto"))
+        @inputText(taskForm("Prioridade"))  
+        
+        <input type="submit" value="Criar">
+        
+    }
+    
+}

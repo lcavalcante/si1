@@ -1,0 +1,71 @@
+@(tasks: List[Task], taskForm: Form[Task])
+
+@import helper._
+
+@main("Lista de tarefas") {
+    
+    
+    <h1> Lista de tarefas </h0>
+    
+    <h2>@tasks.size() Tarefa(s)</h1>
+    
+    <ul>
+        <h3>Não Concluida(s) : </h2>
+        @for(task <- tasks) {
+            
+                @if(!task.getConcluido()){
+                <li>
+                Nome: @task.getNome() 
+                Pojeto: @task.getProjeto() 
+                Prioridade: @task.getPrioridade()
+                
+                @form(routes.Application.deleteTask(task.getId())) {
+                    <input type="submit" value="Remover">
+                    
+                }
+                
+                @form(routes.Application.markTask(task.getId())) {
+                    <input type="submit" value="Concluido">
+                }
+                </li>
+                }
+                
+            
+        }
+    </ul>
+    
+    <ul>
+    	 <h3>Concluida(s) : </h3>
+        @for(task <- tasks) {
+            
+            	@if(task.getConcluido()){
+            	<li>
+                Nome: @task.getNome() 
+                Pojeto: @task.getProjeto() 
+                Prioridade: @task.getPrioridade()
+                
+                @form(routes.Application.deleteTask(task.getId())) {
+                    <input type="submit" value="Remover">
+                    
+                }
+                
+                </li>
+                }
+                
+            
+        }
+    </ul>
+    
+    <h4>Adicione uma nova tarefa!</h3>
+    
+    @form(routes.Application.newTask()) {
+        
+        @inputText(taskForm("Nome")) 
+        @inputText(taskForm("Projeto"))
+        @inputText(taskForm("Prioridade"))  
+        
+        <input type="submit" value="Criar">
+        
+    }
+    
+}

@@ -4,17 +4,59 @@
 
 @main("Lista de tarefas") {
     
-    <h1>@tasks.size() Tarefa(s)</h1>
+    
+    <h1> Lista de tarefas </h1>
+    
+    <h2>@tasks.size() Tarefa(s)</h2>
     
     <ul>
+        <h3>Não Concluida(s) : </h3>
         @for(task <- tasks) {
-            <li>
-                @task.getNome()
+            
+                @if(!task.getConcluido()){
+                <li>
+                Nome: @task.getNome() 
+                <br/>
+                Pojeto: @task.getProjeto() 
+                <br/>
+                Prioridade: @task.getPrioridade()
                 
                 @form(routes.Application.deleteTask(task.getId())) {
                     <input type="submit" value="Remover">
+                    
                 }
-            </li>
+                
+                @form(routes.Application.markTask(task.getId())) {
+                    <input type="submit" value="Concluido">
+                }
+                </li>
+                }
+                
+            
+        }
+    </ul>
+    
+    <ul>
+    	 <h3>Concluida(s) : </h3>
+        @for(task <- tasks) {
+            
+            	@if(task.getConcluido()){
+            	<li>
+                Nome: @task.getNome() 
+                <br/>
+                Pojeto: @task.getProjeto() 
+                <br/>
+                Prioridade: @task.getPrioridade()
+                
+                @form(routes.Application.deleteTask(task.getId())) {
+                    <input type="submit" value="Remover">
+                    
+                }
+                
+                </li>
+                }
+                
+            
         }
     </ul>
     
@@ -23,6 +65,8 @@
     @form(routes.Application.newTask()) {
         
         @inputText(taskForm("Nome")) 
+        @inputText(taskForm("Projeto"))
+        @inputText(taskForm("Prioridade"))  
         
         <input type="submit" value="Criar">
         

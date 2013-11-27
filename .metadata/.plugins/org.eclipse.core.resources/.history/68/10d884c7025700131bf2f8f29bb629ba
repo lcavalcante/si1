@@ -1,0 +1,66 @@
+h1 {
+	font-family: 'Georgia', serif;
+    color: black;
+    text-align: center;
+}
+
+h2 {
+	font-family: 'Georgia', serif;
+    color: black;
+}
+
+body {
+	font-family: 'Georgia', serif;
+    font-weight: lighter;
+    text-align: left;
+    overflow: auto;
+}
+
+#menor{
+	font-size:15px;
+	font-style:italic;
+}
+
+#nova-tarefa {
+	position:fixed;
+	top:4em;
+	left:1.5%;
+    margin-left: 2em;
+	padding-top:0.5em;
+	padding-left:2em;
+	width: 24%;
+	height: 82%;
+    font-size: 20px;
+    background: #FFEE99;
+    box-shadow: 10px 10px 5px #888888;
+}
+
+#tarefas-pendentes {
+	position:fixed;
+	top:4em;
+	left:31%;
+    margin-left: 2em;
+	padding-top:0.5em;
+	padding-left:2em;
+	width: 27%;
+	height: 82%;
+    font-size: 20px;
+    background: #FFA488;
+    box-shadow: 10px 10px 5px #888888;
+    overflow: auto;
+}
+
+#tarefas-feitas {
+	position:fixed;
+	top:4em;
+	left:64%;
+    margin-left: 2em;
+	padding-top:0.5em;
+	padding-left:2em;
+	width: 27%;
+	height: 82%;
+    font-size: 20px;
+    background: #DDFF77;
+    box-shadow: 10px 10px 5px #888888;
+    overflow: auto;
+}
